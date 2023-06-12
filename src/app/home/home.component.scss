@@ -1,0 +1,58 @@
+
+
+.home{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    height: 90vh;
+}
+
+.homedog{
+    height: 40vh;
+}
+
+.homeButtonAll{
+    background-color: #1C231D;
+    color: #D1DBC7;
+    font-size: 2vh;
+    border-radius: 2vh;
+    border: 0;
+    height: 8vh;
+    width: 20vw;
+    margin: 1vw;
+    align-self: center;
+    font-family: 'Cherry Bomb One', cursive;
+}
+
+.homeButtonAll:hover{
+    background-color: #29342a;
+    cursor: pointer;
+}
+
+.homeButtonSearch{
+    background-color: #D1DBC7;
+    color: #1C231D;
+    font-size: 2vh;
+    border-radius: 2vh;
+    border: 0;
+    height: 8vh;
+    width: 20vw;
+    margin: 1vw;
+    align-self: center;
+    font-family: 'Cherry Bomb One', cursive;
+}
+
+.homeButtonSearch:hover{
+    background-color: #e2ebd9;
+    cursor: pointer;
+}
+
+.divider{
+    
+    border-radius: 10vh;
+    align-self: center;
+    height: 18vh;
+    width: 0.1vw;
+    background-color: rgba(0, 0, 0, 0.477);
+}

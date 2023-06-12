@@ -1,0 +1,33 @@
+<link
+  href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
+  rel="stylesheet"
+/>
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&display=swap");
+</style>
+
+<p class="allbreedstext">
+    Selecting the right dog breed is crucial for a fulfilling relationship with your canine companion. Dogs have different energy levels and exercise requirements, so choosing a breed that matches your lifestyle ensures proper physical and mental stimulation. Consider the size of your living space, opting for a breed that comfortably fits your environment. Additionally, understanding potential health concerns associated with specific breeds allows you to take preventive measures and ensure your dog's well-being. By researching and considering factors such as energy level, size, temperament, grooming needs, living conditions, and health concerns, you can make an informed decision. This thoughtful approach leads to a successful and enjoyable companionship with your dog, promoting happiness and a healthy life for both of you. Remember, selecting the right breed is not only beneficial for you but also contributes to the overall well-being of your canine friend.
+</p>
+
+<div class="sorter">
+  <label for="sortOption">Sort by:</label>
+  <select id="sortOption" [(ngModel)]="selectedSortOption">
+    <option value="name">Name</option>
+    <option value="weightdescending">Weight Desc</option>
+    <option value="weightascending">Weight Asc</option>
+  </select>
+  <button (click)="sortBreeds()">Sort</button>
+</div>
+
+<ul class="breedsList_container">
+    <li *ngFor="let breed of breeds" class="allbreeds_main" [style.backgroundImage]="'url(' + breed.image + ')'"
+        [style.backgroundSize]="'cover'" [style.backgroundPosition]="'centre centre'">
+      <span class="breed_title">{{ breed.breed }}</span>
+      <span class="breed_weight"></span>
+      <span class="breed_text">{{ breed.bio }}</span>
+      <span class="homeButtonSearch"></span>
+    </li>
+  </ul>
+  
+  

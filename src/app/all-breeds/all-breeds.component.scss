@@ -1,0 +1,87 @@
+.sorter{
+    padding-left: 5vw;
+    margin-left: 3vh;
+    margin-top: 3vh;
+}
+
+.allbreedstext{
+    padding-left: 5vw;
+    padding-right: 5vw;
+    margin-left: 3vh;
+    margin-top: 6vh;
+    margin-bottom: 6vh;
+    line-height: 3vh;
+    font-size:larger;
+}
+
+.breedsList_container{
+    list-style: none;
+    padding-left: 5vw;
+    padding-right: 5vw;
+}
+
+.allbreeds_main{
+    height: 60vh;
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    list-style: none;
+    margin: 3vh;
+    border-radius: 2vh;
+    padding: 3vh;
+    justify-content: center;
+    align-content: end;
+}
+
+.allbreeds_main:hover{
+    background-blend-mode: darken;
+    cursor: pointer;
+}
+
+.breed_title{
+    grid-area: 1/1/4/4;
+    font-family: 'Cherry Bomb One', cursive;
+    font-size: 6vh;
+    align-self: center;
+    justify-self: left;
+    padding: 1vh;
+    border-radius: 2vh;
+    background-color: #1C231D;
+    color: #e2ebd9;
+    margin: 1vw;
+}
+
+.breed_weight{
+    justify-self: center;
+    text-align: center;
+    font-size: medium;
+    align-self: end;
+    background-color: #d1dbc745;
+    border-radius: 0.3vh;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    padding-left: 2vh;
+    padding-right: 2vh;
+    border-radius: 10vh;
+}
+
+.breed_image{
+    max-height: 18vh;
+    justify-self: center;
+    align-self: end;
+    border-radius: 10vh;
+}
+
+.breed_text{
+    grid-area: 1/4/1/4;
+    background-color: #D1DBC7;
+    color: #1C231D;
+    font-size: 2vh;
+    border-radius: 2vh;
+    border: 0;
+    height: 8vh;
+    width: 30vw;
+    margin: 1vw;
+    padding: 1vw;
+    align-self: center;
+    font-family: 'Cherry Bomb One', cursive;
+}
