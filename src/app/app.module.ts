@@ -8,6 +8,7 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { AllBreedsComponent } from './all-breeds/all-breeds.component';
+import { SingleBreedComponent } from './single-breed/single-breed.component';
 
 const appRoute: Routes = [
   {path: '', component: HomeComponent},
@@ -21,6 +22,7 @@ const appRoute: Routes = [
     FooterComponent,
     HomeComponent,
     AllBreedsComponent,
+    SingleBreedComponent,
   ],
   imports: [
     BrowserModule,

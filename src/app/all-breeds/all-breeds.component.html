@@ -22,7 +22,7 @@
 
 <ul class="breedsList_container">
     <li *ngFor="let breed of breeds" class="allbreeds_main" [style.backgroundImage]="'url(' + breed.image + ')'"
-        [style.backgroundSize]="'cover'" [style.backgroundPosition]="'centre centre'">
+        [style.backgroundSize]="'cover'" [style.backgroundPosition]="'centre centre'" (click)="selectBreed(breed)">
       <span class="breed_title">{{ breed.breed }}</span>
       <span class="breed_weight"></span>
       <span class="breed_text">{{ breed.bio }}</span>

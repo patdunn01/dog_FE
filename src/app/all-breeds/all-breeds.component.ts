@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import axios from 'axios';
 
 @Component({
@@ -10,7 +11,7 @@ export class AllBreedsComponent implements OnInit {
   breeds!: any[];
   selectedSortOption: string = 'name';
 
-  constructor() {}
+  constructor(private router: Router) {}
 
   ngOnInit() {
     this.makeAPICall();
@@ -28,6 +29,7 @@ export class AllBreedsComponent implements OnInit {
         console.error(error);
       });
   }
+
   sortBreeds() {
     if (this.selectedSortOption === 'name') {
       // Sort breeds by name
@@ -40,5 +42,9 @@ export class AllBreedsComponent implements OnInit {
       this.breeds.sort((a, b) => a.weight_kg - b.weight_kg);
     }
   }
-}
 
+  selectBreed(breed: any) {
+    const breedId = breed.id; // or breed.breed, depending on which identifier you want to use
+    this.router.navigate(['/single-breed', breedId]);
+  }
+}
