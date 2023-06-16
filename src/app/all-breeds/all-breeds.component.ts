@@ -44,7 +44,7 @@ export class AllBreedsComponent implements OnInit {
   }
 
   selectBreed(breed: any) {
-    const breedId = breed.id; // or breed.breed, depending on which identifier you want to use
-    this.router.navigate(['/single-breed', breedId]);
+    const breedId = breed.breed;
+    this.router.navigate(['/breeds', breedId]);
   }
 }

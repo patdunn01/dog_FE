@@ -12,7 +12,8 @@ import { SingleBreedComponent } from './single-breed/single-breed.component';
 
 const appRoute: Routes = [
   {path: '', component: HomeComponent},
-  {path: 'allbreeds', component: AllBreedsComponent}
+  {path: 'allbreeds', component: AllBreedsComponent},
+  {path: 'breeds/:id', component: SingleBreedComponent}
 ]
 
 @NgModule({
