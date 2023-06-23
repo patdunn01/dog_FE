@@ -1,0 +1,37 @@
+.singleBreedcontainer{
+    display: grid;
+    grid-template-columns: 25% 75%;
+    
+}
+
+.singeBreedInfo{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.breedName{
+    font-family: 'Cherry Bomb One', cursive;
+    font-size: 4vh;
+    margin-left: 1vw;
+}
+
+.singleBreedImg{
+    grid-area: 2 / 1 / 2 / 4;
+    width: 75vw;
+}
+
+.childFriendly{
+    font-family: 'Cherry Bomb One', cursive;
+    font-size: 3vh;
+    grid-area: 2 / 1 / 2 / 1;
+    align-content: center;
+    justify-content: center;
+    margin-left: 1vw;
+}
+
+.dogScript{
+    margin-left: 1vw;
+    margin-right: 1vw;
+    font-size: 2vh;
+}

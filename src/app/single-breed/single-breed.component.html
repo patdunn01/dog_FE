@@ -1,6 +1,20 @@
-<h1>{{ breedData?.breed }}</h1>
-<img src="{{ breedData?.image }}"> 
-<p>Child friendly: {{ breedData?.childFriendly }}</p>
-<p>Dog friendly: {{ breedData?.dogFriendly }}</p>
-<p>Weight: approx {{ breedData?.weight_kg }}kg</p>
-<p>{{ breedData?.script }}</p>
+<link
+  href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
+  rel="stylesheet"
+/>
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&display=swap");
+</style>
+
+<div class="singleBreedcontainer">
+    <div class="singleBreedInfo">
+        <h1 class="breedName">{{ breedData?.breed }}</h1>
+        <p class="childFriendly">Child friendly: {{ breedData?.childFriendly }} <br> Dog friendly: {{ breedData?.dogFriendly }} <br> Weight: approx {{ breedData?.weight_kg }}kg</p>
+        <p class="dogScript">{{ breedData?.script }}</p>
+    </div>
+  
+  <div>
+    <img class="singleBreedImg" src="{{ breedData?.image }}" />
+  </div>
+  
+</div>
