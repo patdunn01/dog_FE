@@ -1,18 +1,27 @@
+.loader{
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 6vh;
+    font-family: 'Cherry Bomb One', cursive;
+    align-content: center;
+    justify-content: center;
+}
+
 .singleBreedcontainer{
     display: grid;
     grid-template-columns: 25% 75%;
-    
 }
 
 .singeBreedInfo{
     display: flex;
+    flex-wrap: wrap;
     align-content: center;
     justify-content: center;
 }
 
 .breedName{
     font-family: 'Cherry Bomb One', cursive;
-    font-size: 4vh;
+    font-size: 45px;
     margin-left: 1vw;
 }
 
@@ -21,9 +30,21 @@
     width: 75vw;
 }
 
+.bullet-point {
+    list-style-image: url('../../../icons/paws.svg');
+  }
+
+.bullet-point li:before {
+    display: inline-block;
+    width: 1px;
+    height: 1px;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
 .childFriendly{
     font-family: 'Cherry Bomb One', cursive;
-    font-size: 3vh;
+    font-size: 20px;
     grid-area: 2 / 1 / 2 / 1;
     align-content: center;
     justify-content: center;
@@ -31,7 +52,42 @@
 }
 
 .dogScript{
+    font-family: 'Roboto Slab', serif;
+    border-top: 1px solid black;
+    padding-top: 2vh;
     margin-left: 1vw;
     margin-right: 1vw;
-    font-size: 2vh;
+    font-size: 16px;
+    line-height: 28.5px;
+}
+
+.backButton{
+    margin-left: 1vw;
+    font-family: 'Cherry Bomb One', cursive;
+    font-size: 20px;
+    text-decoration: underline;
+}
+
+.backButton:hover{
+    cursor: pointer;
+}
+
+.breederButton{
+    font-family: 'Cherry Bomb One', cursive;
+    font-size: 25px;
+    width: 90%;
+    height: 20vh;
+    justify-self: center;
+    align-self: center;
+    margin: 1vw;
+    border-radius: 2vw;
+    border: 0;
+    background-color: #1C231D;
+    color: #D1DBC7;
+}
+
+.breederButton:hover{
+    background-color: #29342a;
+    cursor: pointer;
+
 }

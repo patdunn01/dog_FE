@@ -6,15 +6,32 @@
   @import url("https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&display=swap");
 </style>
 
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+  </style>
+
+<div class="loader">
+  <p *ngIf="loading">Fetching...</p>
+</div>
+
 <div class="singleBreedcontainer">
     <div class="singleBreedInfo">
+        <a class="backButton" [routerLink]="'/allbreeds'"> Back to breeds </a>
         <h1 class="breedName">{{ breedData?.breed }}</h1>
-        <p class="childFriendly">Child friendly: {{ breedData?.childFriendly }} <br> Dog friendly: {{ breedData?.dogFriendly }} <br> Weight: approx {{ breedData?.weight_kg }}kg</p>
+        <ul class="bullet-point">
+          <li class="childFriendly"><span>Child friendly:</span> {{ breedData?.childFriendly }}</li>
+          <li class="childFriendly"><span>Dog friendly:</span> {{ breedData?.dogFriendly }}</li>
+          <li class="childFriendly"><span>Weight: approx</span> {{ breedData?.weight_kg }}kg</li>
+        </ul>
         <p class="dogScript">{{ breedData?.script }}</p>
+        <button class="breederButton">Find Breeder</button>  
     </div>
   
   <div>
     <img class="singleBreedImg" src="{{ breedData?.image }}" />
   </div>
-  
+
+
+
+
 </div>

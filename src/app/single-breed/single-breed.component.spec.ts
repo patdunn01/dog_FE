@@ -1,5 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { ActivatedRoute, convertToParamMap } from '@angular/router';
+import { RouterModule } from '@angular/router';
+import { of } from 'rxjs';
 import { SingleBreedComponent } from './single-breed.component';
 
 describe('SingleBreedComponent', () => {
@@ -8,7 +10,16 @@ describe('SingleBreedComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [SingleBreedComponent]
+      declarations: [SingleBreedComponent],
+      imports: [RouterModule],
+      providers: [
+        {
+          provide: ActivatedRoute,
+          useValue: {
+            paramMap: of(convertToParamMap({ id: 'your-breed-id' }))
+          }
+        }
+      ]
     });
     fixture = TestBed.createComponent(SingleBreedComponent);
     component = fixture.componentInstance;

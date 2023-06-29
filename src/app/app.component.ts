@@ -15,7 +15,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = 'hello-world';
+  title = 'CheckMyDog';
   subTitle = 'new title';
   public dogSVG: string = '../../icons/dog.svg';
 }

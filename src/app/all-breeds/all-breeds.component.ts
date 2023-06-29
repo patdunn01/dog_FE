@@ -10,6 +10,7 @@ import axios from 'axios';
 export class AllBreedsComponent implements OnInit {
   breeds!: any[];
   selectedSortOption: string = 'name';
+  loading: boolean = false;
 
   constructor(private router: Router) {}
 
@@ -18,12 +19,14 @@ export class AllBreedsComponent implements OnInit {
   }
 
   makeAPICall() {
+
+    this.loading = true;
     const url = 'https://dogs-api-sx58.onrender.com/dogs';
 
     axios.get(url)
       .then(response => {
-        console.log(response.data)
         this.breeds = response.data;
+        this.loading = false;
       })
       .catch(error => {
         console.error(error);

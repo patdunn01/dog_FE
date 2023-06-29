@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, ParamMap } from '@angular/router';
+
 import axios from 'axios';
 
 @Component({
@@ -10,17 +11,19 @@ import axios from 'axios';
 export class SingleBreedComponent implements OnInit {
   breedId: string | null = null;
   breedData: any;
+  loading: boolean = false;
 
   constructor(private route: ActivatedRoute) {}
 
   ngOnInit() {
-    // Access the breed ID from the route parameter
-    this.breedId = this.route.snapshot.paramMap.get('id');
-
-    this.makeAPICall();
+    this.route.paramMap.subscribe((params: ParamMap) => {
+      this.breedId = params.get('id');
+      this.makeAPICall();
+    });
   }
 
   makeAPICall() {
+    this.loading = true;
     const url = `https://dogs-api-sx58.onrender.com/dogs/${this.breedId}`;
 
     axios
@@ -28,7 +31,7 @@ export class SingleBreedComponent implements OnInit {
       .then((response) => {
         if (response.data && response.data.breed) {
           this.breedData = response.data; // Assign the API response data to the property
-          console.log(this.breedData);
+          this.loading = false;
         } else {
           console.error('Invalid API response');
         }
