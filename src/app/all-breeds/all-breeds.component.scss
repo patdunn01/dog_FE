@@ -13,6 +13,10 @@
     margin-top: 3vh;
 }
 
+.sort_button{
+    margin: 1vw;
+}
+
 .allbreedstext{
     padding-left: 5vw;
     padding-right: 5vw;
@@ -84,10 +88,10 @@
     grid-area: 1/4/1/4;
     background-color: #D1DBC7;
     color: #1C231D;
-    font-size: 2vh;
+    font-size: 3vh;
     border-radius: 2vh;
     border: 0;
-    height: 8vh;
+    height: auto;
     width: 30vw;
     margin: 1vw;
     padding: 1vw;

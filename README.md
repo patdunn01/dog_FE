@@ -6,22 +6,21 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
+####
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+This application gathers data from an NestJs API I have created using angular and can be found at 
 
-## Build
+https://dogs-api-sx58.onrender.com/dogs
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+The backend repo can be found at 
 
-## Running unit tests
+https://github.com/patdunn01/dogs_BE
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Please note, this has been made using a free tiered service on render.com so will take a moment or two to wake up before data can be retrieved from it. The "Fetching..." text will be shown in the application until the data is then rendered and displayed on the page.
 
-## Running end-to-end tests
+I have also included some "nice to have" features which are not live just yet due to time contraints but the brief is otherwise fulfilled. These include the "Search" button on the home page and the "Find breeder" button on the breed page. 
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
-## Further help
+Code has been commented at relevant points to outline how the application works.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+I look forward to hearing your feedback!
